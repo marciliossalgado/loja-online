@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Loja Online</h1>
+        <div id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="filter-section">
+            <input type="text" id="search-input" placeholder="Pesquisar produtos...">
+            <select id="sort-select">
+                <option value="">Ordenar por</option>
+                <option value="price-asc">Preço: Menor para Maior</option>
+                <option value="price-desc">Preço: Maior para Menor</option>
+            </select>
+        </section>
+
+        <div id="loading">Carregando produtos...</div>
+
+        <section id="products" class="products"></section>
+    </main>
+
+    <aside id="cart">
+        <button id="close-cart">&times;</button>
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: R$ 0,00</p>
+        <button id="checkout-button">Finalizar Compra</button>
+    </aside>
+
+    <div id="overlay"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
